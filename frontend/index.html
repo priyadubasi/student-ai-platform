@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student AI Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎓 Student AI Platform</h1>
+        <p>Student Management & AI Assistance</p>
+    </header>
+
+    <main>
+
+        <!-- Login Section -->
+        <section class="card">
+
+            <h2>🔐 Login</h2>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+            >
+
+            <button onclick="login()">
+                Login
+            </button>
+
+            <p id="loginMessage"></p>
+
+        </section>
+
+
+        <!-- Student Section -->
+        <section class="card">
+
+            <h2>👨‍🎓 Students</h2>
+
+            <button onclick="loadStudents()">
+                Load Students
+            </button>
+
+            <div id="students"></div>
+
+        </section>
+
+
+        <!-- Add Student Section -->
+        <section class="card">
+
+            <h2>➕ Add Student</h2>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Student Name"
+            >
+
+            <input
+                type="text"
+                id="department"
+                placeholder="Department"
+            >
+
+            <input
+                type="number"
+                id="year"
+                placeholder="Year"
+                min="1"
+                max="4"
+            >
+
+            <button onclick="addStudent()">
+                Add Student
+            </button>
+
+            <p id="studentMessage"></p>
+
+            <!-- AI Chat Section -->
+<section class="card">
+
+    <h2>🤖 AI Assistant</h2>
+
+    <textarea
+        id="question"
+        placeholder="Ask a question about your uploaded documents..."
+        rows="5"
+    ></textarea>
+
+    <button onclick="askAI()">
+        Ask AI
+    </button>
+
+    <p id="aiMessage"></p>
+
+    <div id="aiAnswer"></div>
+
+</section>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
